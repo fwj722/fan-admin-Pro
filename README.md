@@ -1,4 +1,4 @@
-# vue-admin-pro
+# vue-vfan-pro
 
 ## Project setup
 ```

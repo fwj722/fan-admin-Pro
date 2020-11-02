@@ -202,7 +202,7 @@ export default {
   height: 34px;
   width: 100%;
   background: #fff;
-  border-bottom: 1px solid #d8dce5;
+  // border-bottom: 1px solid #d8dce5;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 0 3px 0 rgba(0, 0, 0, .04);
   .tags-view-wrapper {
     .tags-view-item {
@@ -270,21 +270,22 @@ export default {
 .tags-view-wrapper {
   .tags-view-item {
     .el-icon-close {
-      width: 16px;
-      height: 16px;
-      vertical-align: 2px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
       text-align: center;
+      font-size: 18px;
       transition: all .3s cubic-bezier(.645, .045, .355, 1);
       transform-origin: 100% 50%;
-      &:before {
-        transform: scale(.6);
-        display: inline-block;
-        vertical-align: -3px;
-      }
+      vertical-align: -3px;
       &:hover {
-        background-color: #b4bccc;
+        background-color: #a6b8db;
         color: #fff;
+        &:before {
+          display: inline-block;
+          width:100%;
+          transform: scale(.6);
+        }
       }
     }
   }

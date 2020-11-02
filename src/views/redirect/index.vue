@@ -6,7 +6,7 @@ export default {
     this.$router.replace({ path: '/' + path, query })
   },
   render: function (h) {
-    return h() // avoid warning message
+    return h() // 防止警告信息
   }
 }
 </script>

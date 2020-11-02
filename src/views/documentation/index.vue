@@ -1,6 +1,7 @@
 <template>
   <div class="app-container documentation-container">
-    <dropdown-menu class="document-btn" :items="articleList" title="下拉动画" />
+    doc
+    <!-- <dropdown-menu class="document-btn" :items="articleList" title="下拉动画" /> -->
   </div>
 </template>
 

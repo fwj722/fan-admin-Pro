@@ -214,7 +214,7 @@ export default {
         padding: 5px;
     }
 
-    .dropzone:hover {
+    .dropzone:hover { 
         background-color: #F6F6F6;
     }
 
