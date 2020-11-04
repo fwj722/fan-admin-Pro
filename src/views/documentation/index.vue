@@ -1,7 +1,6 @@
 <template>
   <div class="app-container documentation-container">
-    doc
-    <!-- <dropdown-menu class="document-btn" :items="articleList" title="下拉动画" /> -->
+    <dropdown-menu class="document-btn" :items="articleList" title="下拉动画" />
   </div>
 </template>
 
@@ -23,7 +22,6 @@ export default {
 
 <style lang="scss" scoped>
 .documentation-container {
-  margin: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;

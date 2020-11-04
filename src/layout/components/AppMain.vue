@@ -2,9 +2,11 @@
   <section class="app-main">
     <div class="section-container">
       <transition name="fade-transform" mode="out-in">
-        <keep-alive :include="cachedViews">
-          <router-view :key="key" />
-        </keep-alive>
+       <div class="content-wrap">  
+          <keep-alive :include="cachedViews">
+            <router-view :key="key" />
+          </keep-alive>
+       </div>
       </transition>
     </div>
   </section>
@@ -64,5 +66,10 @@ export default {
     padding: 10px;
     background-color: #eef0f3;
     overflow: hidden;
+    .content-wrap{
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
 }
 </style>

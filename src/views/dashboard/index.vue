@@ -29,3 +29,9 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+.dashboard-container {
+   background-color: #fff;
+   height: 100%;
+}
+</style>

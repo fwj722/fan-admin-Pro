@@ -274,18 +274,20 @@ export default {
       height: 18px;
       border-radius: 50%;
       text-align: center;
-      font-size: 18px;
+      font-size: 14px;
       transition: all .3s cubic-bezier(.645, .045, .355, 1);
       transform-origin: 100% 50%;
-      vertical-align: -3px;
+      vertical-align: -1px;
       &:hover {
         background-color: #a6b8db;
         color: #fff;
-        &:before {
-          display: inline-block;
-          width:100%;
-          transform: scale(.6);
-        }
+        width: 18px;
+        height: 18px;
+        padding: 2px;
+        // &:before {
+        //   display: inline-block;
+        //   width:100%;
+        // }
       }
     }
   }
