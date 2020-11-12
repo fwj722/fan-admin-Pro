@@ -1,3 +1,10 @@
+<!--
+ * @Description: 
+ * @Author: fanwenjing
+ * @LastEditors: fanwenjing
+ * @Date: 2020-11-02 10:20:16
+ * @LastEditTime: 2020-11-12 16:38:01
+-->
 <template>
   <el-scrollbar ref="scrollContainer" :vertical="false" class="scroll-container" @wheel.native.prevent="handleScroll">
     <slot />
@@ -87,7 +94,7 @@ export default {
       bottom: 0px;
     }
     .el-scrollbar__wrap {
-      height: 49px;
+      // height: 49px;
     }
   }
 }

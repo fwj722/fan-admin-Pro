@@ -40,7 +40,7 @@
 
     &.has-logo {
       .el-scrollbar {
-        height: calc(100% - 50px);
+        height: calc(100% - 40px);
       }
     }
 
@@ -80,7 +80,9 @@
     .is-active>.el-submenu__title {
       color: $subMenuActiveText !important;
     }
-
+    .bar-item-list>a>.is-active {
+      border-left:#fec171 solid 2px;
+    }
     & .nest-menu .el-submenu>.el-submenu__title,
     & .el-submenu .el-menu-item {
       min-width: $sideBarWidth !important;

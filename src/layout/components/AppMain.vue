@@ -1,8 +1,15 @@
+<!--
+ * @Description: 
+ * @Author: fanwenjing
+ * @LastEditors: fanwenjing
+ * @Date: 2020-11-02 10:20:16
+ * @LastEditTime: 2020-11-12 18:00:46
+-->
 <template>
   <section class="app-main">
     <div class="section-container">
-      <transition name="fade-transform" mode="out-in">
-       <div class="content-wrap">  
+      <transition name="fade-scale" mode="out-in">
+       <div class="content-wrap dashboard-container">  
           <keep-alive :include="cachedViews">
             <router-view :key="key" />
           </keep-alive>
@@ -48,18 +55,12 @@ export default {
   }
 
   .fixed-header+.app-main {
-    padding-top: 84px;
+    padding-top: 66px;
   }
 }
 </style>
 
 <style lang="scss">
-// fix css style bug in open el-dialog
-.el-popup-parent--hidden {
-  .fixed-header {
-    padding-right: 15px;
-  }
-}
 .section-container{
     width: 100%;
     height: 100%;
@@ -69,7 +70,14 @@ export default {
     .content-wrap{
       width: 100%;
       height: 100%;
+      border-radius: 3px;
       overflow: auto;
     }
+}
+// 修复打开dialog弹框的css样式bug
+.el-popup-parent--hidden {
+  .fixed-header {
+    padding-right: 15px;
+  }
 }
 </style>

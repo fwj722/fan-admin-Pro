@@ -1,6 +1,13 @@
+<!--
+ * @Description: 
+ * @Author: fanwenjing
+ * @LastEditors: fanwenjing
+ * @Date: 2020-11-02 10:20:16
+ * @LastEditTime: 2020-11-12 16:07:47
+-->
 <template>
   <el-breadcrumb class="app-breadcrumb" separator="/">
-    <transition-group name="breadcrumb">
+    <transition-group name="zoom-in">
       <el-breadcrumb-item v-for="(item,index) in levelList" :key="item.path">
         <span v-if="item.redirect==='noRedirect'||index==levelList.length-1" class="no-redirect">{{ item.meta.title }}</span>
         <a v-else @click.prevent="handleLink(item)">{{ item.meta.title }}</a>
@@ -38,7 +45,7 @@ export default {
       const first = matched[0]
 
       if (!this.isDashboard(first)) {
-        matched = [{ path: '/dashboard', meta: { title: 'Dashboard' } }].concat(matched)
+        matched = [{ path: '/dashboard', meta: { title: '首页' } }].concat(matched)
       }
 
       this.levelList = matched.filter(item => item.meta && item.meta.title && item.meta.breadcrumb !== false)
@@ -72,7 +79,7 @@ export default {
 .app-breadcrumb.el-breadcrumb {
   display: inline-block;
   font-size: 14px;
-  line-height: 50px;
+  line-height: 40px;
   margin-left: 8px;
 
   .no-redirect {

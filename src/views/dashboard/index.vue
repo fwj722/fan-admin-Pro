@@ -1,5 +1,12 @@
+<!--
+ * @Description: 
+ * @Author: fanwenjing
+ * @LastEditors: fanwenjing
+ * @Date: 2020-11-02 10:20:16
+ * @LastEditTime: 2020-11-12 18:01:27
+-->
 <template>
-  <div class="dashboard-container">
+  <div>
     <component :is="currentRole" />
   </div>
 </template>
@@ -29,9 +36,3 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-.dashboard-container {
-   background-color: #fff;
-   height: 100%;
-}
-</style>

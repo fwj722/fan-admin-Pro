@@ -12,8 +12,10 @@
         <el-tooltip content="Global Size" effect="dark" placement="bottom">
           <size-select id="size-select" class="right-menu-item hover-effect" />
         </el-tooltip>
-        <div class="avatar-wrapper right-menu-item">
-          <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar"/>
+        <div class="right-menu-item avatar-wrapper">
+          <div class="user-avatar">
+            <img :src="avatar+'?imageView2/1/w/80/h/80'" />
+          </div>
         </div>
       </template>
 
@@ -76,14 +78,14 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  height: 50px;
+  height: 40px;
   overflow: hidden;
   position: relative;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
 
   .hamburger-container {
-    line-height: 46px;
+    line-height: 38px;
     height: 100%;
     float: left;
     cursor: pointer;
@@ -104,14 +106,17 @@ export default {
     vertical-align: top;
   }
   .avatar-wrapper {
-    margin-top: 5px;
     position: relative;
-
     .user-avatar {
       cursor: pointer;
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
+      margin: 5px 0;
       border-radius: 10px;
+      img{
+        height: 100%;
+        width: 100%;
+      }
     }
 
     .el-icon-caret-bottom {
@@ -122,6 +127,7 @@ export default {
       font-size: 12px;
     }
   }
+  
 
   .right-menu {
     float: right;
@@ -136,6 +142,7 @@ export default {
       display: inline-block;
       padding: 0 8px;
       height: 100%;
+      line-height: 40px;
       font-size: 18px;
       color: #5a5e66;
       vertical-align:top;
@@ -151,9 +158,8 @@ export default {
     }
 
     .avatar-container {
-      margin-right: 20px;
       .dropdown-wrap{
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }

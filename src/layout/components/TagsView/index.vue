@@ -199,31 +199,43 @@ export default {
 
 <style lang="scss" scoped>
 .tags-view-container {
-  height: 34px;
+  height: 30px;
   width: 100%;
   background: #fff;
   // border-bottom: 1px solid #d8dce5;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 0 3px 0 rgba(0, 0, 0, .04);
+  // box-shadow: inset 0 0 15px hsla(0,0%,39.2%,.1);
   .tags-view-wrapper {
     .tags-view-item {
       display: inline-block;
       position: relative;
       cursor: pointer;
-      height: 26px;
-      line-height: 26px;
-      // border: 1px solid #d8dce5;
+      height: 20px;
+      line-height: 20px;
       color: #495060;
       background: #fff;
       padding: 0 8px;
       font-size: 12px;
       margin-left: 5px;
-      margin-top: 4px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      box-shadow: 0 0px 3px rgba(0,0,0,0.2);
+      border-radius: 2px;
       &:first-of-type {
         margin-left: 15px;
       }
       &:last-of-type {
         margin-right: 15px;
       }
+      &::before {
+          content: '';
+          background: #bfbfbf;
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          position: relative;
+          margin-right: 2px;
+        }
       &.active {
         background-color: #fff;
         color: #1890ff;

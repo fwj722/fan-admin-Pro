@@ -3,7 +3,7 @@
  * @Author: fanwenjing
  * @LastEditors: fanwenjing
  * @Date: 2020-11-02 10:20:16
- * @LastEditTime: 2020-11-02 15:23:55
+ * @LastEditTime: 2020-11-12 16:05:28
 -->
 <template>
   <div class="sidebar-logo-container" :class="{'collapse':collapse}">
@@ -48,8 +48,8 @@ export default {
 .sidebar-logo-container {
   position: relative;
   width: 100%;
-  height: 50px;
-  line-height: 50px;
+  height: 40px;
+  line-height: 40px;
   background: #1d1e23;
   text-align: center;
   overflow: hidden;
@@ -70,7 +70,7 @@ export default {
       margin: 0;
       color: #fff;
       font-weight: 600;
-      line-height: 50px;
+      line-height: 40px;
       font-size: 14px;
       font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
       vertical-align: middle;

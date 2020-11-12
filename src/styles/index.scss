@@ -138,8 +138,8 @@ aside {
 }
 
 .sub-navbar {
-  height: 50px;
-  line-height: 50px;
+  height: 40px;
+  line-height: 40px;
   position: relative;
   width: 100%;
   text-align: right;
@@ -189,3 +189,11 @@ aside {
 .multiselect--active {
   z-index: 1000 !important;
 }
+
+
+// 覆盖原生滚动条样式
+::-webkit-scrollbar-thumb{background-color:#ccc;height:50px;outline-offset:-2px;outline:2px solid #ced3d6;-webkit-border-radius:4px;border:2px solid #ced3d6;}
+::-webkit-scrollbar-thumb:hover{background-color:#ced3d6;height:50px;-webkit-border-radius:5px}
+::-webkit-scrollbar{width:10px;height:10px;}
+::-webkit-scrollbar-track-piece{background-color:#f5f7fa;-webkit-border-radius:0;}
+::-webkit-scrollbar-thumb:active{height:50px;background-color:#ced3d6;-webkit-border-radius:5px}

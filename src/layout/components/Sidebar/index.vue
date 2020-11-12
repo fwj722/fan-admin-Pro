@@ -1,3 +1,10 @@
+<!--
+ * @Description: 
+ * @Author: fanwenjing
+ * @LastEditors: fanwenjing
+ * @Date: 2020-11-02 10:20:16
+ * @LastEditTime: 2020-11-12 16:28:01
+-->
 <template>
   <div :class="{'has-logo':showLogo}">
     <logo v-if="showLogo" :collapse="isCollapse" />
@@ -7,7 +14,7 @@
         :collapse="isCollapse"
         :background-color="variables.menuBg"
         :text-color="variables.menuText"
-        :unique-opened="false"
+        :unique-opened="true"
         :active-text-color="variables.menuActiveText"
         :collapse-transition="false"
         mode="vertical"
@@ -34,7 +41,7 @@ export default {
     activeMenu () {
       const route = this.$route
       const { meta, path } = route
-      // if set path, the sidebar will highlight the path you set
+      // 如果设置了path，则当前侧边栏高亮显示设置的path
       if (meta.activeMenu) {
         return meta.activeMenu
       }

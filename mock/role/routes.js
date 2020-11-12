@@ -46,14 +46,14 @@ let constantRoutes = [
     ]
   },
   {
-    path: '/documentation',
+    path: '/table',
     component: 'layout/Layout',
     children: [
       {
         path: 'index',
-        component: 'views/documentation/index',
-        name: 'Documentation',
-        meta: { title: 'Documentation22', icon: 'documentation', affix: true }
+        component: 'views/table/index',
+        name: 'Table',
+        meta: { title: 'table', icon: 'el-icon-postcard', affix: true }
       }
     ]
   },

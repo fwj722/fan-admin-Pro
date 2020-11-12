@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: fanwenjing
+ * @LastEditors: fanwenjing
+ * @Date: 2020-11-02 10:20:16
+ * @LastEditTime: 2020-11-12 17:23:12
+ */
 
 const tokens = {
   admin: {
@@ -49,7 +56,7 @@ module.exports = [
 
   // get user info
   {
-    url: '/vue-element-admin/user/info\.*',
+    url: '/vue-element-admin/user/info*',
     type: 'get',
     response: config => {
       const { token } = config.query

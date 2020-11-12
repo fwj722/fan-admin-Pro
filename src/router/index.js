@@ -58,14 +58,14 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/documentation',
+    path: '/table',
     component: Layout,
     children: [
       {
         path: 'index',
-        component: () => import('@/views/documentation/index'),
-        name: 'Documentation',
-        meta: { title: '页面1', icon: 'documentation', affix: true }
+        component: () => import('@/views/table/index'),
+        name: 'Table',
+        meta: { title: '页面1', icon: 'el-icon-postcard', affix: true }
       }
     ]
   },
