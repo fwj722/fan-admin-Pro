@@ -188,7 +188,7 @@
   }
 }
 
-// when menu collapsed
+// 当菜单menu collapsed时
 .el-menu--vertical {
   &>.el-menu {
     .svg-icon {
@@ -203,12 +203,12 @@
   .nest-menu .el-submenu>.el-submenu__title,
   .el-menu-item {
     &:hover {
-      // you can use $subMenuHover
+      //使用 $subMenuHover
       background-color: $menuHover !important;
     }
   }
 
-  // the scroll bar appears when the subMenu is too long
+  // 当subMenu过长时使用滚动条
   >.el-menu--popup {
     max-height: 100vh;
     overflow-y: auto;

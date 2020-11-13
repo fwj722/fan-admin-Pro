@@ -42,13 +42,13 @@ const mutations = {
     if (index > -1) {
       state.cachedViews = state.cachedViews.slice(index, index + 1)
     } else {
-      // if index = -1, there is no cached tags
+      // 如果 index = -1, 不缓存tags
       state.cachedViews = []
     }
   },
 
   DEL_ALL_VISITED_VIEWS: state => {
-    // keep affix tags
+    // 保留路由
     const affixTags = state.visitedViews.filter(tag => tag.meta.affix)
     state.visitedViews = affixTags
   },

@@ -3,15 +3,15 @@ import store from './store'
 import { Message } from 'element-ui'
 import NProgress from 'nprogress' // progress bar
 import 'nprogress/nprogress.css' // progress bar style
-import { getToken } from '@/utils/auth' // get token from cookie
-import getPageTitle from '@/utils/get-page-title'
+import { getToken } from '@/utils/auth' //从cookie获取token
+import getPageTitle from '@/utils/getPageTitle'
 
-NProgress.configure({ showSpinner: false }) // NProgress Configuration
+NProgress.configure({ showSpinner: false }) // 进度条配置
 
 const whiteList = ['/login', '/auth-redirect'] // 白名单
 
 router.beforeEach(async (to, from, next) => {
-  // start progress bar
+  // start progress
   // NProgress.start()
 
   // 设置页面的title

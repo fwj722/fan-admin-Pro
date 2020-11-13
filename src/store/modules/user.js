@@ -51,14 +51,14 @@ const actions = {
         const { data } = response
 
         if (!data) {
-          reject('Verification failed, please Login again.')
+          reject('验证失败，请重新登录.')
         }
 
         const { roles, name, avatar, introduction } = data
 
-        // roles must be a non-empty array
+        // 角色必须是费控数组
         if (!roles || roles.length <= 0) {
-          reject('getInfo: roles must be a non-null array!')
+          reject('getInfo: 角色必须是费控数组!')
         }
 
         commit('SET_ROLES', roles)
@@ -81,8 +81,7 @@ const actions = {
         removeToken()
         resetRouter()
 
-        // reset visited views and cached views
-        // to fixed https://github.com/PanJiaChen/vue-element-admin/issues/2485
+        // 重置已访问的 views 和缓存的 views
         dispatch('tagsView/delAllViews', null, { root: true })
 
         resolve()
@@ -102,7 +101,7 @@ const actions = {
     })
   },
 
-  // dynamically modify permissions
+  // 动态修改权限
   async changeRoles ({ commit, dispatch }, role) {
     const token = role + '-token'
 
@@ -113,12 +112,12 @@ const actions = {
 
     resetRouter()
 
-    // generate accessible routes map based on roles
+    // 根据角色生成可访问的routes
     const accessRoutes = await dispatch('permission/generateRoutes', roles, { root: true })
-    // dynamically add accessible routes
+    // 动态添加可访问的routes
     router.addRoutes(accessRoutes)
 
-    // reset visited views and cached views
+    // 重置已访问的 views 和缓存的 views
     dispatch('tagsView/delAllViews', null, { root: true })
   }
 }

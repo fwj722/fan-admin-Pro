@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: fanwenjing
+ * @LastEditors: fanwenjing
+ * @Date: 2020-11-02 10:20:16
+ * @LastEditTime: 2020-11-13 10:47:03
+ */
 import variables from '@/styles/element-variables.scss'
 import defaultSettings from '@/settings'
 
@@ -13,7 +20,6 @@ const state = {
 
 const mutations = {
   CHANGE_SETTING: (state, { key, value }) => {
-    // eslint-disable-next-line no-prototype-builtins
     if (state.hasOwnProperty(key)) {
       state[key] = value
     }

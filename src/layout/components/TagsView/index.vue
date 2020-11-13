@@ -218,7 +218,7 @@ export default {
       margin-left: 5px;
       margin-top: 5px;
       margin-bottom: 5px;
-      box-shadow: 0 0px 3px rgba(0,0,0,0.2);
+      // box-shadow: 0 0px 3px rgba(0,0,0,0.2);
       border-radius: 2px;
       &:first-of-type {
         margin-left: 15px;

@@ -1,12 +1,18 @@
+/*
+ * @Description: 
+ * @Author: fanwenjing
+ * @LastEditors: fanwenjing
+ * @Date: 2020-11-02 10:20:16
+ * @LastEditTime: 2020-11-13 09:51:05
+ */
 /**
- *Created by PanJiaChen on 16/11/29.
  * @param {Sting} url
  * @param {Sting} title
  * @param {Number} w
  * @param {Number} h
  */
 export default function openWindow (url, title, w, h) {
-  // Fixes dual-screen position                            Most browsers       Firefox
+  // 修复双屏位置问题 ，如火狐浏览器-支持大多数浏览器 
   const dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : screen.left
   const dualScreenTop = window.screenTop !== undefined ? window.screenTop : screen.top
 
@@ -17,7 +23,7 @@ export default function openWindow (url, title, w, h) {
   const top = ((height / 2) - (h / 2)) + dualScreenTop
   const newWindow = window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=yes, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left)
 
-  // Puts focus on the newWindow
+  //让页面支持当前窗体，当页面支持窗体时做focus处理
   if (window.focus) {
     newWindow.focus()
   }

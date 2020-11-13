@@ -1,4 +1,10 @@
-/** When your routing table is too long, you can split it into small modules **/
+/*
+ * @Description: 
+ * @Author: fanwenjing
+ * @LastEditors: fanwenjing
+ * @Date: 2020-11-02 10:20:16
+ * @LastEditTime: 2020-11-13 10:55:46
+ */
 
 import Layout from '@/layout'
 

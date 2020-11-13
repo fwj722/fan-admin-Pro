@@ -1,8 +1,13 @@
-// import parseTime, formatTime and set to filter
+/*
+ * @Description: 
+ * @Author: fanwenjing
+ * @LastEditors: fanwenjing
+ * @Date: 2020-11-02 10:20:16
+ * @LastEditTime: 2020-11-13 11:01:17
+ */
 export { parseTime, formatTime } from '@/utils'
 
 /**
- * Show plural label if time is plural number
  * @param {number} time
  * @param {string} label
  * @return {string}
@@ -29,7 +34,7 @@ export function timeAgo(time) {
 }
 
 /**
- * Number formatting
+ * 数字格式处理
  * like 10000 => 10k
  * @param {number} num
  * @param {number} digits
@@ -60,7 +65,7 @@ export function toThousandFilter(num) {
 }
 
 /**
- * Upper case first char
+ * 第一个字符大写
  * @param {String} string
  */
 export function uppercaseFirst(string) {
