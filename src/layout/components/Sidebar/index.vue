@@ -3,7 +3,7 @@
  * @Author: fanwenjing
  * @LastEditors: fanwenjing
  * @Date: 2020-11-02 10:20:16
- * @LastEditTime: 2020-11-12 16:28:01
+ * @LastEditTime: 2020-11-13 11:12:05
 -->
 <template>
   <div :class="{'has-logo':showLogo}">

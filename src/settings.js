@@ -3,7 +3,7 @@
  * @Author: fanwenjing
  * @LastEditors: fanwenjing
  * @Date: 2020-11-02 10:20:16
- * @LastEditTime: 2020-11-13 09:40:21
+ * @LastEditTime: 2020-11-13 15:40:21
  */
 module.exports = {
   title: 'vue-vfanui-pro',
@@ -38,5 +38,7 @@ module.exports = {
    * 默认值仅在生产环境中使用 production env
    * 如果还想在dev中使用它，可以使用 ['production', 'development']
    */
-  errorLog: 'production'
+  errorLog: 'production',
+  /* 颜色默认设置 */
+  logoBgColor:"black"
 }

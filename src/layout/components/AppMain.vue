@@ -3,7 +3,7 @@
  * @Author: fanwenjing
  * @LastEditors: fanwenjing
  * @Date: 2020-11-02 10:20:16
- * @LastEditTime: 2020-11-12 18:00:46
+ * @LastEditTime: 2020-11-13 15:56:29
 -->
 <template>
   <section class="app-main">
@@ -42,9 +42,8 @@ export default {
   position: relative;
   overflow: hidden;
 }
-
 .fixed-header+.app-main {
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 .hasTagsView {

@@ -23,6 +23,13 @@
         <el-switch v-model="sidebarLogo" class="drawer-switch" />
       </div>
 
+      <el-divider></el-divider>
+
+       <div class="drawer-item">
+        <span>主题色</span>
+        <theme-picker style="float: right;height: 26px;margin: -3px 8px 0 0;" @change="themeChange" />
+      </div>
+
     </div>
   </div>
 </template>
@@ -74,6 +81,12 @@ export default {
     themeChange (val) {
       this.$store.dispatch('settings/changeSetting', {
         key: 'theme',
+        value: val
+      })
+    },
+    logoBgColorChange (val) {
+      this.$store.dispatch('settings/changeLogoBgColorSetting', {
+        key: 'logoBgColor',
         value: val
       })
     }

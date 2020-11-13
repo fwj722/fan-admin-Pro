@@ -3,13 +3,13 @@
  * @Author: fanwenjing
  * @LastEditors: fanwenjing
  * @Date: 2020-11-02 10:20:16
- * @LastEditTime: 2020-11-12 16:05:28
+ * @LastEditTime: 2020-11-13 11:30:10
 -->
 <template>
-  <div class="sidebar-logo-container" :class="{'collapse':collapse}">
+  <div class="logo-container" :class="{'collapse':collapse}" :style="{'background-color':logoBgColor}">
     <transition name="sidebarLogoFade">
       <router-link :key="collapse?'collapse':'expand'" class="sidebar-logo-link" to="/">
-        <img v-if="logo" :src="logo" class="sidebar-logo" />
+        <img v-if="logo" :src="collapse?miniLogin:logo" class="sidebar-logo" />
         <h1 v-else class="sidebar-title">{{ title }} </h1>
         <h1 v-if="!collapse" class="sidebar-title">{{ title }} </h1>
       </router-link>
@@ -29,7 +29,13 @@ export default {
   data () {
     return {
       title: '',
-      logo: '/logo.png'
+      logo: '/logo.png',
+      miniLogin:'/logo-mini.png'
+    }
+  },
+  computed:{
+    logoBgColor(){
+       return this.$store.state.settings.logoBgColor
     }
   }
 }
@@ -45,7 +51,7 @@ export default {
   opacity: 0;
 }
 
-.sidebar-logo-container {
+.logo-container {
   position: relative;
   width: 100%;
   height: 40px;
