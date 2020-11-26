@@ -1,9 +1,9 @@
 <!--
- * @Description: 
+ * @Description:
  * @Author: fanwenjing
  * @LastEditors: fanwenjing
  * @Date: 2020-11-02 10:20:16
- * @LastEditTime: 2020-11-13 11:12:05
+ * @LastEditTime: 2020-11-26 17:30:55
 -->
 <template>
   <div :class="{'has-logo':showLogo}">
@@ -16,7 +16,7 @@
         :text-color="variables.menuText"
         :unique-opened="true"
         :active-text-color="variables.menuActiveText"
-        :collapse-transition="false"
+        :collapse-transition="true"
         mode="vertical"
       >
         <sidebar-item v-for="route in permission_routes" :key="route.path" :item="route" :base-path="route.path" />
@@ -38,6 +38,7 @@ export default {
       'permission_routes',
       'sidebar'
     ]),
+    // 当前激活菜单的 index
     activeMenu () {
       const route = this.$route
       const { meta, path } = route

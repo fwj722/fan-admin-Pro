@@ -3,7 +3,7 @@
  * @Author: fanwenjing
  * @LastEditors: fanwenjing
  * @Date: 2020-11-02 10:20:16
- * @LastEditTime: 2020-11-13 11:30:10
+ * @LastEditTime: 2020-11-26 17:02:30
 -->
 <template>
   <div class="logo-container" :class="{'collapse':collapse}" :style="{'background-color':logoBgColor}">
@@ -30,12 +30,12 @@ export default {
     return {
       title: '',
       logo: '/logo.png',
-      miniLogin:'/logo-mini.png'
+      miniLogin: '/logo-mini.png'
     }
   },
-  computed:{
-    logoBgColor(){
-       return this.$store.state.settings.logoBgColor
+  computed: {
+    logoBgColor () {
+      return this.$store.state.settings.logoBgColor
     }
   }
 }

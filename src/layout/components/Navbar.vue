@@ -1,10 +1,15 @@
 <template>
-  <div class="navbar">
-    <hamburger id="hamburger-container" :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
+  <div class="navbar" ref="navbar">
+    <hamburger ref="hamburger" id="hamburger-container" :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
 
-    <breadcrumb id="breadcrumb-container" class="breadcrumb-container" />
+    <!--
+      <breadcrumb id="breadcrumb-container" class="breadcrumb-container" />
+    -->
+     <div class="tag-top-wrap" ref="tagsView">
+      <tags-view v-if="needTagsView && tagsViewPos==='top'"/>
+     </div>
 
-    <div class="right-menu">
+    <div class="right-menu" ref="rightMenu">
       <template v-if="device!=='mobile'">
         <search id="header-search" class="right-menu-item" />
         <error-log class="errLog-container right-menu-item hover-effect" />
@@ -40,17 +45,20 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import Breadcrumb from '@/components/Breadcrumb'
+import { mapState, mapGetters } from 'vuex'
+// import Breadcrumb from '@/components/Breadcrumb'
 import Hamburger from '@/components/Hamburger'
 import ErrorLog from '@/components/ErrorLog'
 import Screenfull from '@/components/Screenfull'
 import SizeSelect from '@/components/SizeSelect'
 import Search from '@/components/HeaderSearch'
 
+import TagsView from './TagsView'
+
 export default {
   components: {
-    Breadcrumb,
+    // Breadcrumb,
+    TagsView,
     Hamburger,
     ErrorLog,
     Screenfull,
@@ -62,7 +70,11 @@ export default {
       'sidebar',
       'avatar',
       'device'
-    ])
+    ]),
+    ...mapState({
+      needTagsView: state => state.settings.tagsView,
+      tagsViewPos: state => state.settings.tagsViewPos
+    })
   },
   methods: {
     toggleSideBar () {
@@ -82,6 +94,7 @@ export default {
   overflow: hidden;
   position: relative;
   background: #fff;
+  display: flex;
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
 
   .hamburger-container {
@@ -95,6 +108,11 @@ export default {
     &:hover {
       background: rgba(0, 0, 0, .025)
     }
+  }
+  .tag-top-wrap{
+    float: left;
+    margin-top:6px;
+    flex: 1;
   }
 
   .breadcrumb-container {
@@ -127,7 +145,6 @@ export default {
       font-size: 12px;
     }
   }
-  
 
   .right-menu {
     float: right;

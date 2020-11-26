@@ -1,9 +1,9 @@
 /*
- * @Description: 
+ * @Description:
  * @Author: fanwenjing
  * @LastEditors: fanwenjing
  * @Date: 2020-11-02 10:20:16
- * @LastEditTime: 2020-11-13 15:40:21
+ * @LastEditTime: 2020-11-26 10:31:20
  */
 module.exports = {
   title: 'vue-vfanui-pro',
@@ -18,7 +18,13 @@ module.exports = {
    * @type {boolean} true | false
    * @description 是否使用tagsView
    */
+
   tagsView: true,
+  /**
+   * @type {object} top：在顶部   bottom：在navbar下面
+   * @description tags的位置，当为top时，tags在顶部navbar位置，为bottom时在navbar下面
+   */
+  tagsViewPos: 'top',
 
   /**
    * @type {boolean} true | false
@@ -40,5 +46,5 @@ module.exports = {
    */
   errorLog: 'production',
   /* 颜色默认设置 */
-  logoBgColor:"black"
+  logoBgColor: 'black'
 }

@@ -1,15 +1,15 @@
 <!--
- * @Description: 
+ * @Description:
  * @Author: fanwenjing
  * @LastEditors: fanwenjing
  * @Date: 2020-11-02 10:20:16
- * @LastEditTime: 2020-11-13 15:56:29
+ * @LastEditTime: 2020-11-26 10:51:09
 -->
 <template>
   <section class="app-main">
     <div class="section-container">
       <transition name="fade-scale" mode="out-in">
-       <div class="content-wrap dashboard-container">  
+       <div class="content-wrap dashboard-container">
           <keep-alive :include="cachedViews">
             <router-view :key="key" />
           </keep-alive>

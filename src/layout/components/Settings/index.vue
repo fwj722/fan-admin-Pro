@@ -14,6 +14,14 @@
       </div>
 
       <div class="drawer-item">
+        <span>Tags位置</span>
+        <el-radio-group v-model="tagsViewPos" :disabled="!tagsView" size="mini" style="float:right;">
+          <el-radio-button label="top">top</el-radio-button>
+          <el-radio-button label="bottom">bottom</el-radio-button>
+        </el-radio-group>
+      </div>
+
+      <div class="drawer-item">
         <span>顶部固定</span>
         <el-switch v-model="fixedHeader" class="drawer-switch" />
       </div>
@@ -61,6 +69,17 @@ export default {
       set (val) {
         this.$store.dispatch('settings/changeSetting', {
           key: 'tagsView',
+          value: val
+        })
+      }
+    },
+    tagsViewPos: {
+      get () {
+        return this.$store.state.settings.tagsViewPos
+      },
+      set (val) {
+        this.$store.dispatch('settings/changeSetting', {
+          key: 'tagsViewPos',
           value: val
         })
       }
